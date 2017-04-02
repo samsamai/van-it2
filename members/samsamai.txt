@@ -1,0 +1,2 @@
+Hi group,
+Please add a file with your name and a greeting inside, in this directory.
