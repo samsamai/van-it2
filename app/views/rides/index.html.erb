@@ -18,24 +18,24 @@
     <th>item_photo</th>
 
     
-<% @rides.each do |r| %>
-<tr>
-<td><%= r.pickup_pt %></td>
-<td><%= r.destination_pt %></td>
-<td><%= r.driver %></td>
-<td><%= r.rider %></td>
-<td><%= r.coupon %></td>
-<td><%= r.fare %></td>
-<td><%= r.item_description %></td>
-<td><%= r.max_dimensions %></td>
-<td><%= r.max_weight %></td>
-<td><%= r.help_needed %></td>
-<td><%= r.start_time %></td>
-<td><%= r.end_time %></td>
-<td><%= r.need_insurance %></td>
-<td><%= r.item_photo %></td>
-<td><%= link_to 'edit', edit_ride_path(r) %></td>
-</tr>
+    <% @rides.each do |r| %>
+    <tr>
+    <td><%= r.pickup_pt %></td>
+    <td><%= r.destination_pt %></td>
+    <td><%= r.driver %></td>
+    <td><%= r.rider %></td>
+    <td><%= r.coupon %></td>
+    <td><%= r.fare %></td>
+    <td><%= r.item_description %></td>
+    <td><%= r.max_dimensions %></td>
+    <td><%= r.max_weight %></td>
+    <td><%= r.help_needed %></td>
+    <td><%= r.start_time %></td>
+    <td><%= r.end_time %></td>
+    <td><%= r.need_insurance %></td>
+    <td><%= r.item_photo %></td>
+    <td><%= link_to 'edit', edit_ride_path(r) %></td>
+    </tr>
 
 <% end %>
 </table>  
