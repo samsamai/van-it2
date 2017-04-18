@@ -1,0 +1,44 @@
+<h1>Rides#index</h1>
+<p>Find me in app/views/rides/index.html.erb</p>
+
+<table>
+    <th>pickup_pt</th>
+    <th>destination_pt</th>
+    <th>driver</th>
+    <th>rider</th>
+    <th>coupon</th>
+    <th>fare</th>
+    <th>item_description</th>
+    <th>max_dimensions</th>
+    <th>max_weight</th>
+    <th>help_needed</th>
+    <th>start_time</th>
+    <th>end_time</th>
+    <th>need_insurance</th>
+    <th>item_photo</th>
+
+    
+    <% @rides.each do |r| %>
+    <tr>
+    <td><%= r.pickup_pt %></td>
+    <td><%= r.destination_pt %></td>
+    <td><%= r.driver %></td>
+    <td><%= r.rider %></td>
+    <td><%= r.coupon %></td>
+    <td><%= r.fare %></td>
+    <td><%= r.item_description %></td>
+    <td><%= r.max_dimensions %></td>
+    <td><%= r.max_weight %></td>
+    <td><%= r.help_needed %></td>
+    <td><%= r.start_time %></td>
+    <td><%= r.end_time %></td>
+    <td><%= r.need_insurance %></td>
+    <td><%= r.item_photo %></td>
+    <td><%= link_to 'edit', edit_ride_path(r) %></td>
+    </tr>
+
+<% end %>
+</table>  
+
+<td><%= link_to 'new', new_ride_path %></td>
+

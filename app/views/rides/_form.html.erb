@@ -1,0 +1,48 @@
+<%= form_for @rides do |r| %>
+
+<%= r.label :pickup_pt %>
+<%= r.text_field :pickup_pt %>
+
+<%= r.label :destination_pt %>
+<%= r.text_field :destination_pt %>
+
+<%= r.label :driver %>
+<%= r.text_field :driver %>
+
+<%= r.label :rider %>
+<%= r.text_field :rider %>
+
+<%= r.label :coupon %>
+<%= r.text_field :coupon %>
+
+<%= r.label :fare %>
+<%= r.text_field :fare %>
+
+<%= r.label :item_description %>
+<%= r.text_field :item_description %>
+
+<%= r.label :max_dimensions %>
+<%= r.text_field :max_dimensions %>
+
+<%= r.label :max_weight %>
+<%= r.text_field :max_weight %>
+
+<%= r.label :help_needed %>
+<%= r.check_box :help_needed %>
+
+
+<%= r.label :start_time %>
+<%= r.text_field :start_time %>
+
+<%= r.label :end_time %>
+<%= r.text_field :end_time %>
+
+<%= r.label :need_insurance %>
+<%= r.text_field :need_insurance %>
+
+<%= r.label :item_photo %>
+<%= r.text_field :item_photo %>
+
+<%= r.submit %>
+ 
+<% end %>
