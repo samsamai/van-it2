@@ -1,9 +1,5 @@
 Rails.application.routes.draw do
-  get 'rides/index'
-
-  get 'rides/edit'
-
-  get 'rides/new'
+  
 
   get 'landing_page/show'
   root to: 'landing_page#show'
