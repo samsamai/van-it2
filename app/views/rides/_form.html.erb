@@ -1,5 +1,8 @@
 <%= form_for @rides do |r| %>
 
+<%= r.label :status %><br>
+<%= r.select :status, Ride.statuses %>
+
 <%= r.label :pickup_pt %>
 <%= r.text_field :pickup_pt %>
 
