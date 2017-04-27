@@ -12,7 +12,9 @@ class RidesController < ApplicationController
   end
   
   def update
-    @rides.update(ride_params)
+    # byebug
+    # ride_params = ride_params.merge({ status: params[:ride][:status]})
+    @rides.update({ status: params[:ride][:status].to_i})
     redirect_to rides_path
   end
 
@@ -21,7 +23,8 @@ class RidesController < ApplicationController
   end
   
   def create
-    @rides = Ride.new(ride_params)
+    status = ride_params.delete(:status).to_i
+    @rides = Ride.new(ride_params.merge({ status: status}))
     if @rides.save
       redirect_to rides_path
     else
@@ -37,6 +40,7 @@ class RidesController < ApplicationController
   
   def ride_params
     params.require(:ride).permit(
+      :status,
       :pickup_pt,
       :destination_pt,
       :driver,

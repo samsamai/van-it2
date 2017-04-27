@@ -1,7 +1,7 @@
 <%= form_for @rides do |r| %>
 
 <%= r.label :status %><br>
-<%= r.select :status, Ride.statuses %>
+<%= r.select :status, Ride.statuses.map { |key, value| [key.humanize, key] } %>
 
 <%= r.label :pickup_pt %>
 <%= r.text_field :pickup_pt %>
@@ -33,7 +33,6 @@
 <%= r.label :help_needed %>
 <%= r.check_box :help_needed %>
 
-
 <%= r.label :start_time %>
 <%= r.text_field :start_time %>
 
@@ -41,7 +40,7 @@
 <%= r.text_field :end_time %>
 
 <%= r.label :need_insurance %>
-<%= r.text_field :need_insurance %>
+<%= r.check_box :need_insurance %>
 
 <%= r.label :item_photo %>
 <%= r.text_field :item_photo %>
