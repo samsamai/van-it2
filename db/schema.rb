@@ -43,8 +43,8 @@ ActiveRecord::Schema.define(version: 20170427004336) do
     t.datetime "last_sign_in_at"
     t.string   "current_sign_in_ip"
     t.string   "last_sign_in_ip"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
+    t.datetime "created_at",                             null: false
+    t.datetime "updated_at",                             null: false
     t.boolean  "rider",                  default: true
     t.boolean  "driver",                 default: false
     t.string   "confirmation_token"
