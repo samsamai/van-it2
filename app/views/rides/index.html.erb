@@ -2,6 +2,7 @@
 <p>Find me in app/views/rides/index.html.erb</p>
 
 <table>
+    <th>status</th>
     <th>pickup_pt</th>
     <th>destination_pt</th>
     <th>driver</th>
@@ -20,6 +21,7 @@
     
     <% @rides.each do |r| %>
     <tr>
+    <td><%= r.status %></td>
     <td><%= r.pickup_pt %></td>
     <td><%= r.destination_pt %></td>
     <td><%= r.driver %></td>
